@@ -2,6 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+* {
+  -webkit-transition-property: all;
+  -webkit-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+  -moz-transition-property: all;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+}
+
+
+
+body {
+  display: block;
+  background:#1b1b2b;
+  padding:75px;
+  text-align:center;
+  font-family: 'Oswald', sans-serif;
+  color: #999;
+}
+
+h1 {
+  color:#c0c0c0;
+  font-weight:100;
+}
+
 .image {
   background-image: url(image_path('index_bg.jpg'));
   background-size: cover;
@@ -21,93 +45,54 @@
   }
 }
 
-.navbar {
-  position: relative;
-  min-height: 50px;
-  margin-bottom: 20px;
-  height: 80px;
-  background-color: transparent;
-  border: none;
-}
-
 .navbar-default {
-  
+  background-color: #1b1b2b;
+  border: none;
+
   .navbar-brand {
-    margin-top: 10px;
-    color: #000;
-        
+    color: #777;
       &:hover {
-        color: #64A9D9;
-        border: 1px solid #64A9D9;
-      } 
+        color: #fff;
+      }
   }
-   
+
   .navbar-nav {
-    
+
     > li {
       
       > a {
-        color: #64A9D9;
-        margin: 10px 5px 5px 5px;
+        color:#999;
+        background-color: #1b1b2b;
+        padding:10px 20px;
+        font-size:12px;
+        text-decoration:none;
+        letter-spacing:2px;
+        text-transform:uppercase;
         
       }
+
       > a:hover, > a:active, > a:focus {
-        color: #000;
-        border: 1px solid #64A9D9;
-      }
-
-
-    } //end li
-
-    > .active {
-
-      > a, > a:hover, > a:focus {
-        background-color: transparent;
-        color: #64A9D9;
+        border:none;
+        background:rgba(0, 0, 0, 0.4);
+        background:#fff;
+        padding:20px 20px;
+        color:#1b1b1b;
       }
 
     }
-
-  } //end .navbar-nav
-
-  //Collapsed styles
-  .navbar-toggle {
-    border-color: #64A9D9;
-
-      &:hover, &:focus {
-        background-color: transparent;
-      }
-
-
-
-      .icon-bar {
-        color: #64A9D9;
-        background-color: #64A9D9;
-
-      }
   }
-
-  .navbar-collapse.collapse.in ul {
-    background-color: transparent;
-  }
-    
-} //end .navbar-default
-
-.footer_bottom {
-  bottom: 0;
-  margin-bottom: 0;
-  border-width: 1px 0 0;
 }
 
 footer {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 999;
-  text-align: center;
-  color: #fff;
-  background-color:#C0C0C0;
-  margin-top: 3px;
-  font-size: 1em;
-  font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size:12px;
+  color:#fff;
+  clear:both;
+  display:block;
+  letter-spacing:2px;
+  border:1px solid #fff;
+  padding:5px;
+  text-decoration:none;
+  width:100%;
+  margin:auto;
+  margin-top:400px;
 }

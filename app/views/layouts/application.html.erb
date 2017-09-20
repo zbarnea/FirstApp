@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FirstApp</title>
+    <title>JohnZ's Portfolio</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,6 +11,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
 
   </head>
 
@@ -29,6 +31,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Products", products_path %></li>
             <li><%= link_to "About", static_pages_about_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
           </ul>
@@ -38,7 +41,7 @@
 
     <%= yield %>
 
-    <footer class="footer_bottom">
+    <footer>
       Copyright &copy; 2017 WebDeveloper. All rights reserved.
     </footer>
   </body>
