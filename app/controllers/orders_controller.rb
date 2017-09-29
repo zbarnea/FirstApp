@@ -1,5 +1,5 @@
-class OrdersController < Application_controller.rb
-  
+class OrdersController < ApplicationController.
+
   def index
   end
 
