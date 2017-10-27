@@ -6,7 +6,7 @@
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
   </ol>
 
-  <!-- Wrapper for slides -->
+  <!-- old
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img alt="Red & White purse" src="https://abbyfashion.co.uk/190-thickbox_default/handmade-red-white-purse-small.jpg" />
@@ -26,6 +26,19 @@
         <p>Paw purse</p>
       </div>
     </div>
+  </div> -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <% @products.each do |product| %>
+      <div class="item<%= " active" if product == @products.first %>">
+        <%= image_tag(product.carousel_image, :class => "img-car") %>
+        <div class="carousel-caption">
+          <h2><%= product.name %></h2>       
+        </div>
+      </div>
+    <% end %>
+    <a class="btn btn-default btn-lg carousel-btn" href="/static_pages/index" role="button"><h3>Enter</h3></a>
   </div>
 
   <!-- Controls -->
