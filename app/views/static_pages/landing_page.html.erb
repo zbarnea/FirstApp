@@ -1,31 +1,22 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <% @products.each_with_index do |product, index| %>
+      <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" class="<%= " active" if product == @products.first %>"></li>
+    <% end %>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img alt="Red & White purse" src="https://abbyfashion.co.uk/190-thickbox_default/handmade-red-white-purse-small.jpg" />
-      <div class="carousel-caption">
-        <p>Red & White purse</p>
+    <% @products.each do |product| %>
+      <div class="item<%= " active" if product == @products.first %>">
+        <%= link_to image_tag(product.image_url), product %>
+        <div class="carousel-caption">
+          <%= product.name %>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img alt="Coloured purse" src="https://abbyfashion.co.uk/196-thickbox_default/handmade-multi-color-purse-small.jpg" />
-      <div class="carousel-caption">
-        <p>Coloured purse</p>
-      </div>
-    </div>
-    <div class="item">
-      <img alt="Paw purse" src="https://abbyfashion.co.uk/194-thickbox_default/handmade-paws-purse-large.jpg" />
-      <div class="carousel-caption">
-        <p>Paw purse</p>
-      </div>
-    </div>
+    <% end %>
   </div>
 
   <!-- Controls -->
@@ -37,4 +28,4 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
+</div><!-- /carousel -->
