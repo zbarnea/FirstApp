@@ -1,22 +1,6 @@
-<div class="col-sm align-self-start" id="card">
-  <a href="#"><h2><%= product.name %></h2></a>
-  <br> 
-  <%= image_tag(product.image_url, class: "img-fluid img-thumbnail", width: '318px', height: '180px') %> 
-  <br>
-  <br>  
-  <%= product.description %>
-  <br>
-   <%= product.color %>
-  <br>
-  <%= product.price %>
-  <br>
-  <br>
-  <a href="#" class="btn btn-default" style="background-color: #eee;">More Information</a>
-  <br>
-  <br>
-  <td><%= link_to 'Show', product %></td> 
-  <td><%= link_to 'Edit', edit_product_path(product) %></td>
-  <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>     
-  <br>
-  <br>
-</div> <!-- end col -->
+<div class="col-sm-2 col-md-4">
+  <h1><%= link_to product.name, product %></h1>
+  <p><%= image_tag(product.image_url, :size => "260x260") %></p>
+  <p><%= product.description %></p>
+  <strong>$ <%= product.price %></strong>
+</div><!-- /col -->
