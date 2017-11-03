@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
   <%= @product.name %>
+</p>
+
+<p>
+  <%= image_tag(@product.image_url, class: "img-fluid show-img") %>
 </p>
 
 <p>
@@ -11,20 +14,15 @@
 </p>
 
 <p>
-  <strong>Image url:</strong>
-  <%= image_tag(@product.image_url, class: "img-fluid show-img") %>
-</p>
-
-<p>
   <strong>Color:</strong>
   <%= @product.color %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>Price: £</strong>
   <%= @product.price %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Edit product', edit_product_path(@product) %> |
+<%= link_to 'Delete product', @product, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'View all products', products_path %>
