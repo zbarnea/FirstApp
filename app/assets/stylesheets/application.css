@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+ul {
+  padding: 1em 0 1em 1em;
+  margin: 0;
+}
+
+li {
+  font-size: 0.9em;
+  list-style: none;
+  display: inline;
+  padding-right: 1em;
+  -webkit-transition: color .5s ease-in-out;
+  transition: color .5s ease-in-out;
+  cursor: pointer;
+}
+
+li:hover {
+  color: #fff;
+}
+
+.activeMenu {
+  color: #fff;
+}
+
+.search_box {
+  display: inline-block;
+  margin: 0 0 0 4em;
+}
