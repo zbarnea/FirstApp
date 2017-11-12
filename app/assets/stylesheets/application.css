@@ -47,7 +47,7 @@ li:hover {
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
-  background: #ced4ee;
+  background: #1b1b2b;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 .login-container {
-  background: #1b1b2b;
+  background: #ced4ee;
   padding: 12px;
 }
 
