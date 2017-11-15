@@ -23,6 +23,18 @@
   <%= @product.price %>
 </p>
 
+
+<hr style="width: 50%;">
+<p>Highest Rating:
+  <div class="rated" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></div>
+</p>
+
+
+<p>Lowest Rating:
+  <div class="rated" data-score="<%= @product.lowest_rating_comment.try(:rating) %>"></div>
+</p>
+
+<hr style="width: 75%;">
 <%= link_to 'Edit product', edit_product_path(@product) %> |
 <%= link_to 'Delete product', @product, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'View all products', products_path %>
