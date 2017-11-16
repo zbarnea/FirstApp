@@ -23,6 +23,16 @@
   <%= @product.price %>
 </p>
 
+<p>
+  Average Rating: 
+  <div class="rated" data-score="<%= @product.average_rating %>"></div>
+</p>
+
+<hr style="width: 50%;">
+<%= render 'new_comment' %>
+
+<%= render 'comments' %>
+
 
 <hr style="width: 50%;">
 <p>Highest Rating:
