@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
 
+  validates :name, presence: true
   has_many :comments
 
   def self.search(search_term)
