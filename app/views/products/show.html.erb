@@ -3,7 +3,7 @@
     <p class="lead">
       <%= @product.name %></p>
     <p>
-      <%= image_tag(@product.image_url, class: "img-fluid") %>
+      <%= image_tag(@product.image_url, data_zoom_image: @product.image_url, width: "50%", class: "img-zoom") %>
     </p>
     <p>
       <strong>Description:</strong>
