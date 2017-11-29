@@ -1,14 +1,16 @@
 <section class="container-fluid">
   <div class="row">
-    <p class="lead">
-      <%= @product.name %></p>
-    <p>
-      <%= image_tag(@product.image_url, data_zoom_image: @product.image_url, width: "50%", class: "img-zoom") %>
-    </p>
-    <p>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
+    <% cache @product do %>
+      <p class="lead">
+        <%= @product.name %></p>
+      <p>
+        <%= image_tag(@product.image_url, data_zoom_image: @product.image_url, width: "50%", class: "img-zoom") %>
+      </p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
+    <% end %>
     <p>
       <strong>Color:</strong>
       <%= @product.color %>
