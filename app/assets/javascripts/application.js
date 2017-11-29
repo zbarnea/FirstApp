@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require jquery
-//= require rails-ujs
+//= require jquery_ujs
 //= require turbolinks
-//= require jquery3
+//= require jquery.raty
 //= require_tree .
-//= require jquery.elevateZoom-3.0.8.min.js
+//= require jquery.elevateZoom-3.0.8.min.js 
