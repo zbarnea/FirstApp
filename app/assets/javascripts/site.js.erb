@@ -17,10 +17,7 @@ function refreshRating() {
   });
 }
 
-$(document).on('turbolinks:load', function(){
-  
-  refreshRating();
-  
+$(document).on('turbolinks:load', function(){  
+  refreshRating();  
   $(".img-zoom").elevateZoom({scrollZoom : true});
-  
 });
