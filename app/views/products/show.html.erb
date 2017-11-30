@@ -1,5 +1,5 @@
 <section class="container-fluid">
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
     <% cache @product do %>
       <p class="lead">
         <%= @product.name %></p>
