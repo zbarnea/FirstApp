@@ -61,4 +61,6 @@ Rails.application.configure do
   default_url_options
 
   config.action_mailer.perform_deliveries = true
+
+  config.app_generators.javascript_engine = :javascript
 end
