@@ -1,6 +1,10 @@
 class Product < ApplicationRecord
 
   validates :name, presence: true
+  validates :description, presence: true
+  validates :color, presence: true
+  validates :price, presence: true
+  has_many :order  
   has_many :comments
 
   def self.search(search_term)
