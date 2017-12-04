@@ -1,15 +1,10 @@
 var refreshRating = function() {
-  $('.rating').raty({
-    starHalf: '<%= asset_path 'star-half.png' %>',
-    starOff: '<%= asset_path 'star-off.png' %>',
-    starOn: '<%= asset_path 'star-on.png' %>',
+  $('.rating').raty({ path: '/assets',
     scoreName: 'comment[rating]'
   });
 
   $('.rated').raty({
-    starHalf: '<%= asset_path 'star-half.png' %>',
-    starOff: '<%= asset_path 'star-off.png' %>',
-    starOn: '<%= asset_path 'star-on.png' %>',
+    path: '/assets',
     readOnly: true,
     score: function() {
       return $(this).attr('data-score');
