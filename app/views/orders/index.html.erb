@@ -1,26 +1,14 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Orders</h1>
+<header>
+  <h1>Orders</h1>
+</header>
 
-<table>
-  <thead>
-    <tr>
-      <th>Order Number &nbsp;&nbsp; </th>
-      <th>Email  &nbsp;&nbsp; </th>
-      <th>Product  &nbsp;&nbsp; </th>
-      <th>Total</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @orders.each do |order| %>
-      <tr>
-        <td><%= order.id %></td>
-        <td><%= order.user.email %></td>
-        <td><%= order.product.name %></td>
-        <td><%= order.total %></td>
-        
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <% @orders.each do |order| %>
+    <div class="col-sm-2 col-md-4">
+      <h2>Order # <%= order.id %></h2>
+      <p>Product: <%= order.product.name %></p>
+      <strong>Total: $<%= order.total %></strong>
+    </div>
+  <% end %>
+ </div>
